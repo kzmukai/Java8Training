@@ -21,7 +21,6 @@ public class Ex08 {
 	        zip(first, second).forEach(System.out::println);
 	    }
 
-	   
 	    public static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
 	        final List<T> firstList = first.collect(Collectors.toList());
 	        final List<T> secondList = second.collect(Collectors.toList());

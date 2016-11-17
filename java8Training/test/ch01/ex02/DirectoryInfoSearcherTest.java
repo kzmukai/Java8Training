@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class DirectoryInfoSearcherTest {
 
-	private String[] resultStrings = { "settings", "bin", "src", "test" };
+	private String[] resultStrings = { ".settings", "bin","sample", "src", "test" };
 
 	@Test
 	public void getSubDirectoryTest() {

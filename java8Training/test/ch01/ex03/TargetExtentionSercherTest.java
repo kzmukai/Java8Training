@@ -10,13 +10,13 @@ import ch01.ex02.DirectoryInfoSearcher;
 
 public class TargetExtentionSercherTest {
 
-	private String[] resultStrings = { ".\\src\\ch01\\ex03\\sample\\test1.txt", ".\\src\\ch01\\ex03\\sample\\test2.txt", ".\\src\\ch01\\ex03\\sample\\test3.txt"};
+	private String[] resultStrings = { ".\\sample\\test1.txt", ".\\sample\\test2.txt", ".\\sample\\test3.txt"};
 	
 	@Test
 	public void getSubDirectoryTest() {
 		TargetExtentionSercher teDirSearcher = new TargetExtentionSercher();
 
-		File file = new File(".\\src\\ch01\\ex03\\sample\\");
+		File file = new File(".\\sample");
 		File[] fileArray = teDirSearcher.getSubDirectory(file,"txt");
 
 		for (int i = 0; i < fileArray.length; i++) {

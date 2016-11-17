@@ -17,14 +17,13 @@ public class Ex01 {
 	public static void main(final String... args) {
 		final String contents;
 		try {
-			contents = new String(Files.readAllBytes(Paths.get("C:\\test.txt")), StandardCharsets.UTF_8);
+			contents = new String(Files.readAllBytes(Paths.get(".\\sample\\target\\target.txt")), StandardCharsets.UTF_8);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
 		
 		
 		final List<String> words = Arrays.asList(contents.split("[\\P{L}]+"));
-
 
 	   final Counter count = new Counter();
        for (String w : words) {
