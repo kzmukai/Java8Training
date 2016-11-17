@@ -1,4 +1,4 @@
-package ch01;
+package ch01.ex01;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -8,13 +8,14 @@ import java.util.Comparator;
 Arrays.sortメソッド内で呼び出されているコンパレータのコードは，sortメソッドを 
 呼び出したスレッドで実行されるでしょうか.  
 それとも，別のスレッドで実行されるでしょうか． 
+*テストなし。
 */
 
 /**
  * 回答、System.outした結果がmainと出力されるため、
  * 呼び出したスレッドで実行される。
  * 
- *
+ *　テストなし。
  */
 
 public class ArraysSort {
