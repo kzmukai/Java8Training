@@ -1,10 +1,12 @@
-package ch01.ex02;
+package ch02.ex02;
 
 import static org.junit.Assert.*;
 
 import java.io.File;
 
 import org.junit.Test;
+
+import ch01.ex02.DirectoryInfoSearcher;
 
 public class DirectoryInfoSearcherTest {
 
