@@ -23,10 +23,6 @@ public class FlightSimulate {
 
 	public static LocalDateTime getArrivalTime(ZoneId arrivalZone, ZoneId departureZone, LocalDateTime timeOfDeparture,
 			Duration travelTime) {
-		Objects.requireNonNull(arrivalZone, "A parameter \"arrivalZone\" is null");
-		Objects.requireNonNull(departureZone, "A parameter \"departureZone\" is null");
-		Objects.requireNonNull(timeOfDeparture, "A parameter \"timeOfDeparture\" is null");
-		Objects.requireNonNull(travelTime, "A parameter \"travelTime\" is null");
 		return LocalDateTime.ofInstant(ZonedDateTime.of(timeOfDeparture, departureZone).plus(travelTime).toInstant(),
 				arrivalZone);
 	}
