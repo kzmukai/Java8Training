@@ -16,8 +16,8 @@ public class Difference {
 	public static void main(String[] args) {
 		ZoneId startZone = ZoneId.of("CET");
 		ZoneId endZone = ZoneId.of("America/Los_Angeles");
-		LocalDateTime startTime = LocalDateTime.of(2015, 9, 1, 14, 5);
-		LocalDateTime endTime = LocalDateTime.of(2015, 9, 1, 16, 40);
+		LocalDateTime startTime = LocalDateTime.of(2017, 1, 1, 14, 5);
+		LocalDateTime endTime = LocalDateTime.of(2017, 1, 1, 16, 40);
 		long travelSecondTime = new Difference().calcTravelTime(startZone, endZone, startTime, endTime).getSeconds();
 		int hour = (int) travelSecondTime / 3600;
 		int minute = (int) ((travelSecondTime - hour * 3600) / 60);
