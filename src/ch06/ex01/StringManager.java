@@ -18,7 +18,7 @@ public class StringManager {
 	public static AtomicReference<String> maxLengthString = new AtomicReference<String>();
 
 	public static List<String> getWordsList() throws IOException {
-		String contents = new String(Files.readAllBytes(Paths.get("./Resources/target.txt")),
+		String contents = new String(Files.readAllBytes(Paths.get("c://target.txt")),
 				StandardCharsets.UTF_8);
 		return Arrays.asList(contents.split("[\\P{L}]+"));
 	}
