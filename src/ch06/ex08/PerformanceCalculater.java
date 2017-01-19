@@ -24,13 +24,11 @@ public class PerformanceCalculater {
 		for (int i = 0; i < bigArray.length; i++) {
 			bigArray[i] = Double.toString(random.nextDouble());
 		}
-		// 計測
-		final int COUNT = 64; // 何回繰り返すか
+		final int COUNT = 64; 
 		for (int n = 8 * 1024; n <= bigArray.length; n += 1024) {
 			String[] array;
 			long startTime;
 			System.out.println("要素数 : " + n);
-			// シングルスレッド
 			long totalTime = 0;
 			for (int i = 0; i < COUNT; i++) {
 				array = Arrays.copyOf(bigArray, n);
@@ -39,7 +37,6 @@ public class PerformanceCalculater {
 				totalTime += System.nanoTime() - startTime;
 			}
 			System.out.println("Single : " + (totalTime / COUNT) / 1E9 + "秒");
-			// マルチスレッド
 			totalTime = 0;
 			for (int i = 0; i < COUNT; i++) {
 				array = Arrays.copyOf(bigArray, n);

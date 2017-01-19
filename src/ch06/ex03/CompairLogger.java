@@ -50,7 +50,6 @@ public class CompairLogger {
 		LongAdder globalCounterforLongAdder = new LongAdder();
 		CountDownLatch latchforLongAdder = new CountDownLatch(TASK);
 		ExecutorService poolforLongAdder = Executors.newCachedThreadPool();
-		long startTimeforLongAdder = System.nanoTime();
 		for (int n = 0; n < TASK; n++) {
 			poolforLongAdder.submit(
 		        () -> {

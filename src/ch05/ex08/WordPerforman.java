@@ -20,10 +20,10 @@ public class WordPerforman {
 		 LocalDateTime now = LocalDateTime.now();
 		 ZonedDateTime utcNow = ZonedDateTime.of(now, Clock.systemUTC().getZone());
 		 ZoneId.getAvailableZoneIds().stream()
-		     .map(ZoneId::of)                                                      // ゾーンID
-		     .map(zone -> ZonedDateTime.of(now, zone))                             // そのゾーンIDの日付時間
-		     .filter(time -> Duration.between(time, utcNow).toMinutes() % 60 != 0) // 分の端数
-		     .map(ZonedDateTime::getZone)                                          // ゾーンIDに戻す
+		     .map(ZoneId::of)                                                     
+		     .map(zone -> ZonedDateTime.of(now, zone))                            
+		     .filter(time -> Duration.between(time, utcNow).toMinutes() % 60 != 0) 		     
+		     .map(ZonedDateTime::getZone)                                          
 		     .forEach(System.out::println);
 		      } 
 }

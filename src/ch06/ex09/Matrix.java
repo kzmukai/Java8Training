@@ -10,17 +10,11 @@ import java.util.Arrays;
  */
 
 public class Matrix {
-	/**
-	 * 要素の配列<br>
-	 * 1オリジンなのでインデックス 0 は使わない
-	 */
 	private double[][] a = new double[2 + 1][2 + 1];
 
-	/** default コンストラクタ */
 	public Matrix() {
 	}
 
-	/** 全ての要素を指定するコンストラクタ */
 	public Matrix(double a11, double a12, double a21, double a22) {
 		a[1][1] = a11;
 		a[1][2] = a12;
@@ -28,17 +22,14 @@ public class Matrix {
 		a[2][2] = a22;
 	}
 
-	/** 要素の取得 */
 	public double get(int row, int column) {
 		return a[row][column];
 	}
 
-	/** 要素の設定 */
 	public void set(int row, int column, double value) {
 		a[row][column] = value;
 	}
 
-	/** 乗算 */
 	public Matrix multiply(Matrix other) {
 		Matrix result = new Matrix();
 		for (int row = 1; row <= 2; row++) {
