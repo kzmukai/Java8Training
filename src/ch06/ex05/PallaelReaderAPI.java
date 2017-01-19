@@ -20,8 +20,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author budougumi0617
- * @note 複数スレッドが複数のファイルから全ての単語を読み込むアプリケーションを書きなさい。
+ *複数スレッドが複数のファイルから全ての単語を読み込むアプリケーションを書きなさい。
  *       各単語がどのファイルで使用されていたかを管理するために
  *       ConcurrentHashMap<String, Set<File>>
  *       を使用しなさい。 マップを更新するために、mergeメソッドを使用しなさい。

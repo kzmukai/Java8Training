@@ -10,11 +10,13 @@ import java.util.concurrent.atomic.LongAdder;
 *
 * 1,000 個のスレッドを生成し、各スレッドは、ある1 つのカウンターを100,000 回だけ 1 ずつ増加させます。AtomicLong
 * とLongAdder を使用した場合の性能を比較しな さい。
+* 
 結果
  経過時間 : 1.990926451秒
 カウンタ : 100000000
 経過時間 : 2.218504441秒
 カウンタ : 100000000
+
 */
 public class CompairLogger {
 

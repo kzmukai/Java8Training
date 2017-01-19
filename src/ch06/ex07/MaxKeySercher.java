@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *       最大値を持つキーを見つけなさい
  *       （同じ最大値を持つキーがあれば、どちらのキーでも構いません）。
  */
-public class MaxKeySercer {
+public class MaxKeySercher {
 	public static Entry<String, Long> resultEntries;
 
 	public static String getKeyHasMaxValue(ConcurrentHashMap<String, Long> map) {
