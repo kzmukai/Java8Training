@@ -19,12 +19,10 @@ public class BasicAuth {
 	private InputStream basicAuthentication(URL url, String user, String password)
 		    throws IOException {
 		    URLConnection connection = url.openConnection();
-		    // ユーザーコードとパスワードを Base64 でエンコード
+		
 		    Base64.Encoder encoder = Base64.getEncoder();
 		    String auth = user + ":" + password;
 		    auth = encoder.encodeToString(auth.getBytes(StandardCharsets.UTF_8));
-
-		    connection.setRequestProperty("Authorization", "Basic " + auth);
 		    connection.connect();
 		    return connection.getInputStream();
 		}
